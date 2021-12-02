@@ -9,32 +9,32 @@
  </head>
  
  <body>
- 	<div class="container">
+ 	<div class="container bg-light bg-gradient" >
 	 	<h3>Preencha as suas informações</h3>
 	 	
-	 	<form th:action="@{/users}" th:object="${user}" method="post">
-		 		<div class="">
-		 			<label th:for="name">Nome:</label>
-		 			<input type="text" th:field="*{name}" placeholder="Digite seu nome" required="required">
+	 	<form class="row g-3"th:action="@{/users}" th:object="${user}" method="post">
+		 		<div class="col-12">
+		 			<label class="form-label" th:for="name">Nome:</label>
+		 			<input type="text" class="form-control" th:field="*{name}" placeholder="Digite seu nome" required="required">
+		 		</div>
+		 		<div class="col-md-4">
+		 			<label class="form-label" th:for="birthDate">Data de Nascimento</label>
+		 			<input type="date" class="form-control" th:field="*{birthDate}" required="required">
+		 		</div>
+		 		<div class="col-md-4">
+		 			<label class="form-label" th:for="nickname">Usuário: </label>
+		 			<input type="text"  class="form-control" th:field="*{nickname}" placeholder="Usuário" required="required">
+		 		</div>
+		 		<div class="col-md-4">
+		 			<label class="form-label" th:for="password">Senha:</label>
+		 			<input type="password"  class="form-control" th:field="*{password}" placeholder="******" minlength="6" required="required">
+		 		</div>
+		 		<div class="form-check">
+		 			<input type="checkbox" class = "form-check-label" th:field="*{according}" required="required">
+		 			<label class = "form-check-label">Concordo com todos os termos de serviço</label>
 		 		</div>
 		 		<div>
-		 			<label th:for="birthDate">Data de Nascimento</label>
-		 			<input type="date" th:field="*{birthDate}" required="required">
-		 		</div>
-		 		<div>
-		 			<label th:for="nickname">Apelido: </label>
-		 			<input type="text" th:field="*{nickname}" placeholder="Apelido" required="required">
-		 		</div>
-		 		<div>
-		 			<label th:for="password">Senha:</label>
-		 			<input type="password" th:field="*{password}" placeholder="******" minlength="6" required="required">
-		 		</div>
-		 		<div>
-		 			<label class = "text-decoration-underline">Concordo com todos os termos de serviço</label>
-		 			<input type="checkbox" th:field="*{according}" required="required">
-		 		</div>
-		 		<div>
-		 			<button class = "btn btn-secondary" type="submit">Enviar</button>
+		 			<button class = "btn btn-primary" type="submit">Enviar</button>
 		 		</div>
 	 	</form>
  	</div>

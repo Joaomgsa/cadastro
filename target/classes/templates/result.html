@@ -10,14 +10,19 @@
     </head>
 
     <body>
-        <h3>Cadastro efetuado com sucesso:</h3>
-
-        <p>Nome: <b th:text="${user.name}"/></p>
-        <p>Data de nascimento: <b th:text="${{user.birthDate}}"/></p>
-        <p>Apelido: <b th:text="${user.nickname}"/></p>
-        <p>Senha: <b th:text="${user.password}"/></p>
-        <p>Concorda com os termos de uso? <b th:text="${user.according}"/></p>
-        
+       
+		<div class="content">
+			<div class="card mx-auto" style="width: 18rem;">       
+				<div class="card-header bg-primary bg-gradient text-white">Cadastro efetuado com sucesso:</div>        
+			    	<ul class="list-group list-group-flush list-unstyled">	
+				        <li>Nome: <b th:text="${user.name}"/></li>
+				        <li>Data de nascimento: <b th:text="${{user.birthDate}}"/></li>
+				        <li>Apelido: <b th:text="${user.nickname}"/></li>
+				        <li>Senha: <b th:text="${user.password}"/></li>
+				        <li>Concorda com os termos de uso? <b th:text="${user.according}"/></li>
+			        </ul>
+		    </div>
+	    </div>    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       	<script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
